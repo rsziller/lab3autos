@@ -1,0 +1,82 @@
+﻿@model IEnumerable<lab2.Models.NodoAuto>
+
+@{
+    ViewData["Title"] = "BuscarAuto";
+}
+
+<h1>Buscar Autos</h1>
+<a asp-action="MostrarAutos" class="btn btn-outline-danger" style="position:absolute; left: 1180px; top:80px" role="button">Regresar a Lista</a>
+
+<nav class="navbar navbar-dark bg-dark">
+
+    <form class="form-inline my-2 my-lg-0" asp-controller="Home" asp-action="BuscarAuto">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-light active">
+                <input type="radio" name="Buscar" id="Buscar" value="I" autocomplete="off" checked> ID
+            </label>
+            <label class="btn btn-outline-light">
+                <input type="radio" name="Buscar" id="Buscar" value="S" autocomplete="off"> Serie
+            </label>
+            <label class="btn btn-outline-light">
+                <input type="radio" name="Buscar" id="Buscar" value="E" autocomplete="off"> Email
+            </label>
+        </div>
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="Texto" style="position:absolute; left: 750px;">
+        <button class="btn btn-outline-info my-2 my-sm-0" style="position:absolute; left: 1000px;" type="submit">Buscar</button>
+    </form>
+</nav>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Propietario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Serie)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Propietario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serie)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

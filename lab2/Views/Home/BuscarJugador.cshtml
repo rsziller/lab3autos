@@ -1,0 +1,87 @@
+﻿@model IEnumerable<lab2.Models.Jugador>
+
+@{
+    ViewData["Title"] = "BuscarJugador";
+}
+
+<h1>Buscar Jugadores</h1>
+<a asp-action="ShowPlayers" class="btn btn-outline-danger" style="position:absolute; left: 1180px; top:80px" role="button">Regresar a Lista</a>
+
+<nav class="navbar navbar-dark bg-dark">
+
+    <form class="form-inline my-2 my-lg-0" asp-controller="Home" asp-action="BuscarJugador">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-light active">
+                <input type="radio" name="Buscar" id="Buscar" value="N" autocomplete="off" checked> Nombre Apellido
+            </label>
+            <label class="btn btn-outline-light">
+                <input type="radio" name="Buscar" id="Buscar" value="R" autocomplete="off"> Rol
+            </label>
+            <label class="btn btn-outline-light">
+                <input type="radio" name="Buscar" id="Buscar" value="K" autocomplete="off"> KDA
+            </label>
+            <label class="btn btn-outline-light">
+                <input type="radio" name="Buscar" id="Buscar" value="C" autocomplete="off"> Creep Score
+            </label>
+            <label class="btn btn-outline-light">
+                <input type="radio" name="Buscar" id="Buscar" value="E" autocomplete="off" > Equipo
+            </label>
+        </div>
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="Texto" style="position:absolute; left: 750px;">
+        <button class="btn btn-outline-info my-2 my-sm-0" style="position:absolute; left: 1000px;" type="submit">Buscar</button>
+    </form>
+</nav>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KDA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreepScore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Jugador item in ViewBag.Jugadores)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KDA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreepScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Equipo)
+            </td>
+            <td>
+                @Html.ActionLink("Borrar", "DeletePlayer", new { id = item.Id })
+                @Html.ActionLink("Editar", "EditPlayer", new { id = item.Id })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

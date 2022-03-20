@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "ShowPlayer";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Listado de Jugadores</h1>
+        </div>
+    </div>
+
+    <a asp-action="BuscarJugador" class="btn btn-outline-danger" style="position:absolute; left: 1180px; top:80px" role="button">Buscar Jugador</a>
+
+    <div class="row">
+        <div class="col-12">
+
+            <table class="table table-bordered table-striped">
+                <tr class="table-success">
+                    <th>Id</th>
+                    <th data-sortable="true">Nombre</th>
+                    <th>Apellido</th>
+                    <th>Rol</th>
+                    <th>KDA</th>
+                    <th>Creep Score</th>
+                    <th>Equipo</th>
+                    <th></th>
+                </tr>
+                @foreach (var jugador in ViewData["jugadores"] as DataStructures.LinearStructures.CustomDoublyLinkedList<Jugador>)
+                {
+            <tr>
+                <td>@jugador.Id</td>
+                <td>@jugador.Nombre</td>
+                <td>@jugador.Apellido</td>
+                <td>@jugador.Rol</td>
+                <td>@jugador.KDA</td>
+                <td>@jugador.CreepScore</td>
+                <td>@jugador.Equipo</td>
+                <td>
+
+                    @Html.ActionLink("Borrar", "DeletePlayer", new { id = jugador.Id })
+                    @Html.ActionLink("Editar", "EditPlayer", new { id = jugador.Id })
+                </td>
+            </tr>
+                }
+
+            </table>
+
+
+
+        </div>
+    </div>
+    <div class="row">
+
+        <div>
+            <a asp-action="Index">Back to Home</a>
+        </div>
+        <div>
+            <a asp-action="FormPlayer">Ingresar nuevo Jugador</a>
+        </div>
+    </div>
+</div>
+

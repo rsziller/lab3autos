@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "ShowTeam";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Listado de Equipos</h1>
+        </div>
+    </div>
+
+    
+    <div class="row">
+        <div class="col-12">
+
+            <table class="table table-bordered table-striped">
+                <tr class="table-success">
+                    <th>Id</th>
+                    <th data-sortable="true">Nombre</th>
+                    <th>Coach</th>
+                    <th>Liga</th>
+                    <th>Fecha</th>
+                    <th></th>
+                </tr>
+                @foreach (var equipo in ViewData["equipos"] as DataStructures.LinearStructures.CustomDoublyLinkedList<Equipo>)
+                {
+            <tr>
+                <td>@equipo.Id</td>
+                <td>@equipo.Nombre</td>
+                <td>@equipo.Coach</td>
+                <td>@equipo.Liga</td>
+                <td>@equipo.Fecha</td>
+                <td>
+
+                    @Html.ActionLink("Borrar", "DeleteTeam", new { id = equipo.Id })
+                    @Html.ActionLink("Editar", "EditTeam", new { id = equipo.Id })
+                </td>
+            </tr>
+                }
+
+            </table>
+
+
+
+        </div>
+    </div>
+    <div class="row">
+
+        <div>
+            <a asp-action="Index">Back to Home</a>
+        </div>
+        <div>
+            <a asp-action="FormTeam">Ingresar nuevo Equipo</a>
+        </div>
+    </div>
+</div>

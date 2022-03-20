@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "ShowClient";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Listado de Clientes</h1>
+        </div>
+    </div>
+
+    <p><button type="button" class="btn btn-dark" onclick="location.href='@Url.Action("ShowClientName", "Home")'">Ordenar por nombre</button></p>
+    <p><button type="button" class="btn btn-dark" onclick="location.href='@Url.Action("ShowClientLast", "Home")'">Ordenar por apellido</button></p>
+    <div class="row">
+        <div class="col-12">
+
+            <table class="table table-bordered table-striped">
+                <tr class="table-success">
+                    <th data-sortable="true">Nombre</th>
+                    <th>Apellido</th>
+                    <th>Número</th>
+                    <th>Descripción</th>
+                </tr>
+                @foreach (var cliente in ViewData["clientes"] as DataStructures.LinearStructures.CustomDoublyLinkedList<Cliente>)
+                {
+                    <tr>
+                        <td>@cliente.Nombre</td>
+                        <td>@cliente.Apellido</td>
+                        <td>@cliente.Telefono</td>
+                        <td>@cliente.Descripcion</td>
+                    </tr>
+                }
+
+            </table>
+
+
+
+        </div>
+    </div>
+    <div class="row">
+
+        <div>
+            <a asp-action="Index">Back to Home</a>
+        </div>
+        <div>
+            <a asp-action="FormClient">Ingresar nuevo Cliente</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\bin\Debug\netcoreapp3.1\ManualTest.exe
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\bin\Debug\netcoreapp3.1\ManualTest.deps.json
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\bin\Debug\netcoreapp3.1\ManualTest.runtimeconfig.json
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\bin\Debug\netcoreapp3.1\ManualTest.runtimeconfig.dev.json
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\bin\Debug\netcoreapp3.1\ManualTest.dll
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\bin\Debug\netcoreapp3.1\ManualTest.pdb
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\bin\Debug\netcoreapp3.1\DataStructures.dll
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\bin\Debug\netcoreapp3.1\DataStructures.pdb
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\obj\Debug\netcoreapp3.1\ManualTest.csproj.AssemblyReference.cache
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\obj\Debug\netcoreapp3.1\ManualTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\obj\Debug\netcoreapp3.1\ManualTest.AssemblyInfoInputs.cache
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\obj\Debug\netcoreapp3.1\ManualTest.AssemblyInfo.cs
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\obj\Debug\netcoreapp3.1\ManualTest.csproj.CoreCompileInputs.cache
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\obj\Debug\netcoreapp3.1\ManualTest.csproj.CopyComplete
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\obj\Debug\netcoreapp3.1\ManualTest.dll
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\obj\Debug\netcoreapp3.1\ManualTest.pdb
+C:\Users\Rolando Ziller\source\repos\lab2\ManualTest\obj\Debug\netcoreapp3.1\ManualTest.genruntimeconfig.cache

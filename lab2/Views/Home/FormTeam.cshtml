@@ -1,0 +1,59 @@
+﻿@model lab2.Models.Equipo
+
+@{
+    ViewData["Title"] = "FormTeam";
+}
+
+
+
+
+
+
+<h1>FormTeam</h1>
+
+<h4>Equipo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Home" asp-action="SaveTeam">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Coach" class="control-label"></label>
+                <input asp-for="Coach" class="form-control" />
+                <span asp-validation-for="Coach" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Liga" class="control-label"></label>
+                <input asp-for="Liga" class="form-control" />
+                <span asp-validation-for="Liga" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" class="form-control" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="ImportarCSVT">
+
+    <input type="file"  name="ArchivoCargado" />
+    <br />
+    <input type="submit" value="Agregar"  />
+
+</form>
+
+<div>
+    <a asp-action="Index">Back to Home</a>
+</div>
+
