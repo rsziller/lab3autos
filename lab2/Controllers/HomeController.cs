@@ -563,7 +563,8 @@ namespace lab2.Controllers
                             nodoauto.Marca = Fila.Split(",")[4];
                             nodoauto.Serie = Fila.Split(",")[5];
                             ArbolBusqueda.Add(nodoauto, nodoauto.BuscarID);
-                            
+                            ArbolBusquedaSerie.Add(nodoauto, nodoauto.BuscarSerie);
+                            ArbolBusquedaEmail.Add(nodoauto, nodoauto.BuscarEmail);
 
                         }
 
@@ -575,7 +576,7 @@ namespace lab2.Controllers
                     
                 }
             }
-
+            
             ViewBag.Autos = ArbolBusqueda.Mostrar();
             return View("Index");
 
@@ -599,8 +600,8 @@ namespace lab2.Controllers
 
         public ActionResult MostrarAutosEmail()
         {
-            
-            foreach (string Fila in textoGuardado.Split("\r\n"))
+
+            /*foreach (string Fila in textoGuardado.Split("\r\n"))
             {
                 NodoAuto nodoauto = new NodoAuto();
                 if (!string.IsNullOrEmpty(Fila))
@@ -617,7 +618,7 @@ namespace lab2.Controllers
                 }
 
 
-            }
+            } */
 
             List<NodoAuto> ListaAutos = ArbolBusquedaEmail.Mostrar();
             return View("MostrarAutos", ListaAutos);
@@ -626,7 +627,7 @@ namespace lab2.Controllers
         public ActionResult MostrarAutosSerie()
         {
 
-            foreach (string Fila in textoGuardado.Split("\r\n"))
+            /*foreach (string Fila in textoGuardado.Split("\r\n"))
             {
                 NodoAuto nodoauto = new NodoAuto();
                 if (!string.IsNullOrEmpty(Fila))
@@ -643,7 +644,7 @@ namespace lab2.Controllers
                 }
 
 
-            }
+            }*/
 
             List<NodoAuto> ListaAutos = ArbolBusquedaSerie.Mostrar();
             return View("MostrarAutos", ListaAutos);
@@ -696,15 +697,15 @@ namespace lab2.Controllers
             {
                 AutoBuscar.Serie = Texto;
                 Debug.WriteLine(AutoBuscar.Serie.ToString());
-                AutoBuscar = ArbolBusqueda.Get(AutoBuscar, AutoBuscar.BuscarSerie);
-                ArbolBusquedaEs.Add(AutoBuscar, AutoBuscar.BuscarID);
+                AutoBuscar = ArbolBusquedaSerie.Get(AutoBuscar, AutoBuscar.BuscarSerie);
+                ArbolBusquedaEs.Add(AutoBuscar, AutoBuscar.BuscarSerie);
             }
             else if (Buscar == "E")
             {
                 AutoBuscar.Email = Texto;
 
-                AutoBuscar = ArbolBusqueda.Get(AutoBuscar, AutoBuscar.BuscarEmail);
-                ArbolBusquedaEs.Add(AutoBuscar, AutoBuscar.BuscarID);
+                AutoBuscar = ArbolBusquedaEmail.Get(AutoBuscar, AutoBuscar.BuscarEmail);
+                ArbolBusquedaEs.Add(AutoBuscar, AutoBuscar.BuscarEmail);
             }
 
 
