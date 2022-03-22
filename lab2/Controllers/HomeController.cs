@@ -548,6 +548,7 @@ namespace lab2.Controllers
 
                 using (var stream = new StreamReader(ArchivoCargado.OpenReadStream()))
                 {
+                    Cronometro.Restart();
                     stream.ReadLine();
                     string Texto = stream.ReadToEnd();
                     Debug.WriteLine(Texto);
@@ -570,7 +571,10 @@ namespace lab2.Controllers
 
 
                     }
-
+                    Cronometro.Stop();
+                    EscribirLog("Se cargo un archivo masivamente");
+                    Debug.WriteLine(ArbolBusqueda.Mostrar());
+                    Debug.WriteLine("Se cargo un archivo masivamente. Tiempo de Ejecucion en -> " + Cronometro.ElapsedMilliseconds + " Milisegundos \n");
                     textoGuardado = Texto;
                     //Console.WriteLine(Texto);
                     
@@ -619,8 +623,12 @@ namespace lab2.Controllers
 
 
             } */
+            Cronometro.Restart();
 
             List<NodoAuto> ListaAutos = ArbolBusquedaEmail.Mostrar();
+            Cronometro.Stop();
+            EscribirLog("Se ordeno el arbol por email");
+            Debug.WriteLine("Se ordeno el arbol por email. Tiempo de Ejecucion en -> " + Cronometro.ElapsedMilliseconds + " Milisegundos \n");
             return View("MostrarAutos", ListaAutos);
         }
 
@@ -645,8 +653,13 @@ namespace lab2.Controllers
 
 
             }*/
-
+            Cronometro.Restart();
+            
             List<NodoAuto> ListaAutos = ArbolBusquedaSerie.Mostrar();
+
+            Cronometro.Stop();
+            EscribirLog("Se ordeno el arbol por serie");
+            Debug.WriteLine("Se ordeno el arbol por serie. Tiempo de Ejecucion en -> " + Cronometro.ElapsedMilliseconds + " Milisegundos \n");
             return View("MostrarAutos", ListaAutos);
         }
 
@@ -657,6 +670,7 @@ namespace lab2.Controllers
 
         public IActionResult GuardarAutosManual(string ID, string Email, string Propietario, string Color, string Marca, string Serie)
         {
+            Cronometro.Restart();
             NodoAuto nodoauto = new NodoAuto();
 
             nodoauto.ID = ID;
@@ -669,7 +683,9 @@ namespace lab2.Controllers
             ArbolBusquedaEmail.Add(nodoauto, nodoauto.BuscarEmail);
             ArbolBusquedaSerie.Add(nodoauto, nodoauto.BuscarSerie);
 
-
+            Cronometro.Stop();
+            EscribirLog("Se creo un automovil");
+            Debug.WriteLine("Se creo un automovil. Tiempo de Ejecucion en -> " + Cronometro.ElapsedMilliseconds + " Milisegundos \n");
 
             return View();
         }

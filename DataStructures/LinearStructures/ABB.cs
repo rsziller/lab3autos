@@ -1,11 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace DataStructures.LinearStructures
 {
     public class ABB<T> : ADT.BaseTree<T> where T : IComparable
     {
+
+        public void EscribirLog(string Texto, int cantidad)
+        {
+            Texto = Texto + ", " + cantidad+ " comparaciones \n";
+            Debug.WriteLine(Texto);
+            string RutaTXT = @"Instrucciones.txt";
+            System.IO.File.AppendAllText(RutaTXT, Texto);
+        }
+
+        
         Node<T> Raiz = new Node<T>();
         Node<T> Eliminar = new Node<T>();
         public void Add(T value, Delegate delegado)
@@ -43,6 +54,7 @@ namespace DataStructures.LinearStructures
                 MostrarRaiz(NodoRaiz.right, Lista);
             }
         }
+
         
 
         protected override T Obtener(T value, Delegate Delegado)
@@ -51,43 +63,58 @@ namespace DataStructures.LinearStructures
             Node<T> NoEncontrado = new Node<T>();
             while (NodoPivote.value != null)
             {
+                
                 if (Convert.ToInt32(Delegado.DynamicInvoke(value, NodoPivote.value)) == 1)
                 {
+                    
                     if (NodoPivote.right.value != null)
                     {
                         NodoPivote = NodoPivote.right;
+                        
                     }
                     else
                     {
+                        
                         return NoEncontrado.value;
                     }
                 }
                 else if (Convert.ToInt32(Delegado.DynamicInvoke(value, NodoPivote.value)) == -1)
                 {
+                    
                     if (NodoPivote.left.value != null)
                     {
                         NodoPivote = NodoPivote.left;
+                        
+
                     }
                     else
                     {
+                        
                         return NoEncontrado.value;
                     }
                 }
                 else if (Convert.ToInt32(Delegado.DynamicInvoke(value, NodoPivote.value)) == 0)
                 {
+
                     return NodoPivote.value;
+
                 }
                 else
                 {
+                    
                     return NoEncontrado.value;
                 }
             }
+            
             return NodoPivote.value;
+
+            
 
         }
 
         protected override void Insertar(T value, Delegate Delegado, Node<T> NodoRaiz)
         {
+
             if (NodoRaiz.value == null)
             {
                 NodoRaiz.value = value;

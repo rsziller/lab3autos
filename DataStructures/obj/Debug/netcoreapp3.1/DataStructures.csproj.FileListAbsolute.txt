@@ -18,3 +18,13 @@ C:\Users\herre\OneDrive\Escritorio\Primer Ciclo 2022\Estructura de Datos\Laborat
 C:\Users\herre\OneDrive\Escritorio\Primer Ciclo 2022\Estructura de Datos\Laboratorio\Laboratorio 02\lab2_EDD\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.csproj.CoreCompileInputs.cache
 C:\Users\herre\OneDrive\Escritorio\Primer Ciclo 2022\Estructura de Datos\Laboratorio\Laboratorio 02\lab2_EDD\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.dll
 C:\Users\herre\OneDrive\Escritorio\Primer Ciclo 2022\Estructura de Datos\Laboratorio\Laboratorio 02\lab2_EDD\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.pdb
+C:\Users\Rolando Ziller\source\repos\labauto\DataStructures\bin\Debug\netcoreapp3.1\DataStructures.deps.json
+C:\Users\Rolando Ziller\source\repos\labauto\DataStructures\bin\Debug\netcoreapp3.1\DataStructures.dll
+C:\Users\Rolando Ziller\source\repos\labauto\DataStructures\bin\Debug\netcoreapp3.1\DataStructures.pdb
+C:\Users\Rolando Ziller\source\repos\labauto\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.csproj.AssemblyReference.cache
+C:\Users\Rolando Ziller\source\repos\labauto\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rolando Ziller\source\repos\labauto\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.AssemblyInfoInputs.cache
+C:\Users\Rolando Ziller\source\repos\labauto\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.AssemblyInfo.cs
+C:\Users\Rolando Ziller\source\repos\labauto\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.csproj.CoreCompileInputs.cache
+C:\Users\Rolando Ziller\source\repos\labauto\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.dll
+C:\Users\Rolando Ziller\source\repos\labauto\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.pdb
