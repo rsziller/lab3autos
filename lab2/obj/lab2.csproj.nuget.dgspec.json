@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\lab2\\lab2.csproj": {}
+    "C:\\Users\\herre\\OneDrive\\Escritorio\\Primer Ciclo 2022\\Estructura de Datos\\Laboratorio\\Laboratorio 03\\lab3autos\\lab2\\lab2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\DataStructures\\DataStructures.csproj": {
+    "C:\\Users\\herre\\OneDrive\\Escritorio\\Primer Ciclo 2022\\Estructura de Datos\\Laboratorio\\Laboratorio 03\\lab3autos\\DataStructures\\DataStructures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\DataStructures\\DataStructures.csproj",
+        "projectUniqueName": "C:\\Users\\herre\\OneDrive\\Escritorio\\Primer Ciclo 2022\\Estructura de Datos\\Laboratorio\\Laboratorio 03\\lab3autos\\DataStructures\\DataStructures.csproj",
         "projectName": "DataStructures",
-        "projectPath": "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\DataStructures\\DataStructures.csproj",
-        "packagesPath": "C:\\Users\\Rolando Ziller\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\DataStructures\\obj\\",
+        "projectPath": "C:\\Users\\herre\\OneDrive\\Escritorio\\Primer Ciclo 2022\\Estructura de Datos\\Laboratorio\\Laboratorio 03\\lab3autos\\DataStructures\\DataStructures.csproj",
+        "packagesPath": "C:\\Users\\herre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\herre\\OneDrive\\Escritorio\\Primer Ciclo 2022\\Estructura de Datos\\Laboratorio\\Laboratorio 03\\lab3autos\\DataStructures\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Rolando Ziller\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\herre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,17 +63,22 @@
         }
       }
     },
-    "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\lab2\\lab2.csproj": {
+    "C:\\Users\\herre\\OneDrive\\Escritorio\\Primer Ciclo 2022\\Estructura de Datos\\Laboratorio\\Laboratorio 03\\lab3autos\\lab2\\lab2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\lab2\\lab2.csproj",
+        "projectUniqueName": "C:\\Users\\herre\\OneDrive\\Escritorio\\Primer Ciclo 2022\\Estructura de Datos\\Laboratorio\\Laboratorio 03\\lab3autos\\lab2\\lab2.csproj",
         "projectName": "lab2",
-        "projectPath": "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\lab2\\lab2.csproj",
-        "packagesPath": "C:\\Users\\Rolando Ziller\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\lab2\\obj\\",
+        "projectPath": "C:\\Users\\herre\\OneDrive\\Escritorio\\Primer Ciclo 2022\\Estructura de Datos\\Laboratorio\\Laboratorio 03\\lab3autos\\lab2\\lab2.csproj",
+        "packagesPath": "C:\\Users\\herre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\herre\\OneDrive\\Escritorio\\Primer Ciclo 2022\\Estructura de Datos\\Laboratorio\\Laboratorio 03\\lab3autos\\lab2\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Rolando Ziller\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\herre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +92,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\DataStructures\\DataStructures.csproj": {
-                "projectPath": "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\DataStructures\\DataStructures.csproj"
+              "C:\\Users\\herre\\OneDrive\\Escritorio\\Primer Ciclo 2022\\Estructura de Datos\\Laboratorio\\Laboratorio 03\\lab3autos\\DataStructures\\DataStructures.csproj": {
+                "projectPath": "C:\\Users\\herre\\OneDrive\\Escritorio\\Primer Ciclo 2022\\Estructura de Datos\\Laboratorio\\Laboratorio 03\\lab3autos\\DataStructures\\DataStructures.csproj"
               }
             }
           }

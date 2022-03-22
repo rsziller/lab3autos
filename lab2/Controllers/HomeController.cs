@@ -27,6 +27,11 @@ namespace lab2.Controllers
         public static ABB<NodoAuto> ArbolBusqueda = new ABB<NodoAuto>();
         public static ABB<NodoAuto> ArbolBusquedaEmail = new ABB<NodoAuto>();
         public static ABB<NodoAuto> ArbolBusquedaSerie = new ABB<NodoAuto>();
+
+        public static AVL<NodoAuto> ArbolBuscarAVL = new AVL<NodoAuto>();
+        public static AVL<NodoAuto> ArbolBuscarMailAVL = new AVL<NodoAuto>();
+        public static AVL<NodoAuto> ArbolBuscarSerieAVL = new AVL<NodoAuto>();
+
         public static List<NodoAuto> Autos = new List<NodoAuto>();
         
         public static string RutaBase;
@@ -567,6 +572,7 @@ namespace lab2.Controllers
 
                         }
 
+                        gg
 
                     }
 
@@ -593,6 +599,15 @@ namespace lab2.Controllers
         {
 
             List<NodoAuto> ListaAutos = ArbolBusqueda.Mostrar();
+            List<NodoAuto> ListaAutoAVL = new List<NodoAuto>();
+
+            ListaAutoAVL = ArbolBuscarAVL.Get();
+
+            foreach (var item in ListaAutoAVL)
+            {
+                Debug.WriteLine("id Vehiculo: " + item.ID);
+            }
+
             return View("MostrarAutos", ListaAutos);
         }
 
@@ -668,6 +683,7 @@ namespace lab2.Controllers
             ArbolBusquedaEmail.Add(nodoauto, nodoauto.BuscarEmail);
             ArbolBusquedaSerie.Add(nodoauto, nodoauto.BuscarSerie);
 
+            ArbolBuscarAVL.Add(nodoauto.BuscarID, nodoauto);
 
 
             return View();
