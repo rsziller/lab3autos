@@ -559,6 +559,7 @@ namespace lab2.Controllers
                     foreach (string Fila in Texto.Split("\r\n"))
                     {
                         NodoAuto nodoauto = new NodoAuto();
+                        List<NodoAuto> ListaAutoAVL = new List<NodoAuto>();
                         if (!string.IsNullOrEmpty(Fila))
                         {
                             nodoauto.ID = Fila.Split(",")[0];
@@ -568,11 +569,17 @@ namespace lab2.Controllers
                             nodoauto.Marca = Fila.Split(",")[4];
                             nodoauto.Serie = Fila.Split(",")[5];
                             ArbolBusqueda.Add(nodoauto, nodoauto.BuscarID);
-                            
+
+                            foreach (var item in ListaAutoAVL)
+                            {
+                            Debug.WriteLine("id Vehiculo: " + item.ID);
+                            }
 
                         }
 
-                        gg
+
+
+
 
                     }
 
