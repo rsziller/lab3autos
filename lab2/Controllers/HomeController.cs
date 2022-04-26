@@ -27,6 +27,11 @@ namespace lab2.Controllers
         public static ABB<NodoAuto> ArbolBusqueda = new ABB<NodoAuto>();
         public static ABB<NodoAuto> ArbolBusquedaEmail = new ABB<NodoAuto>();
         public static ABB<NodoAuto> ArbolBusquedaSerie = new ABB<NodoAuto>();
+
+        public static AVL<NodoAuto> ArbolBuscarAVL = new AVL<NodoAuto>();
+        public static AVL<NodoAuto> ArbolBuscarMailAVL = new AVL<NodoAuto>();
+        public static AVL<NodoAuto> ArbolBuscarSerieAVL = new AVL<NodoAuto>();
+
         public static List<NodoAuto> Autos = new List<NodoAuto>();
         
         public static string RutaBase;
@@ -555,6 +560,7 @@ namespace lab2.Controllers
                     foreach (string Fila in Texto.Split("\r\n"))
                     {
                         NodoAuto nodoauto = new NodoAuto();
+                        List<NodoAuto> ListaAutoAVL = new List<NodoAuto>();
                         if (!string.IsNullOrEmpty(Fila))
                         {
                             nodoauto.ID = Fila.Split(",")[0];
@@ -567,7 +573,15 @@ namespace lab2.Controllers
                             ArbolBusquedaSerie.Add(nodoauto, nodoauto.BuscarSerie);
                             ArbolBusquedaEmail.Add(nodoauto, nodoauto.BuscarEmail);
 
+                            foreach (var item in ListaAutoAVL)
+                            {
+                            Debug.WriteLine("id Vehiculo: " + item.ID);
+                            }
+
                         }
+
+
+
 
 
                     }
@@ -598,6 +612,15 @@ namespace lab2.Controllers
         {
 
             List<NodoAuto> ListaAutos = ArbolBusqueda.Mostrar();
+            List<NodoAuto> ListaAutoAVL = new List<NodoAuto>();
+
+            ListaAutoAVL = ArbolBuscarAVL.Get();
+
+            foreach (var item in ListaAutoAVL)
+            {
+                Debug.WriteLine("id Vehiculo: " + item.ID);
+            }
+
             return View("MostrarAutos", ListaAutos);
         }
 
@@ -686,6 +709,8 @@ namespace lab2.Controllers
             Cronometro.Stop();
             EscribirLog("Se creo un automovil");
             Debug.WriteLine("Se creo un automovil. Tiempo de Ejecucion en -> " + Cronometro.ElapsedMilliseconds + " Milisegundos \n");
+
+            ArbolBuscarAVL.Add(nodoauto.BuscarID, nodoauto);
 
             return View();
         }

@@ -6085,19 +6085,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rolando Ziller\\.nuget\\packages\\": {}
+    "C:\\Users\\herre\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\lab2\\lab2.csproj",
+      "projectUniqueName": "C:\\Users\\herre\\OneDrive\\Escritorio\\LAB\\lab3autos\\lab2\\lab2.csproj",
       "projectName": "lab2",
-      "projectPath": "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\lab2\\lab2.csproj",
-      "packagesPath": "C:\\Users\\Rolando Ziller\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\lab2\\obj\\",
+      "projectPath": "C:\\Users\\herre\\OneDrive\\Escritorio\\LAB\\lab3autos\\lab2\\lab2.csproj",
+      "packagesPath": "C:\\Users\\herre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\herre\\OneDrive\\Escritorio\\LAB\\lab3autos\\lab2\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Rolando Ziller\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\herre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6111,8 +6118,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\DataStructures\\DataStructures.csproj": {
-              "projectPath": "C:\\Users\\Rolando Ziller\\source\\repos\\labauto\\DataStructures\\DataStructures.csproj"
+            "C:\\Users\\herre\\OneDrive\\Escritorio\\LAB\\lab3autos\\DataStructures\\DataStructures.csproj": {
+              "projectPath": "C:\\Users\\herre\\OneDrive\\Escritorio\\LAB\\lab3autos\\DataStructures\\DataStructures.csproj"
             }
           }
         }
@@ -6150,7 +6157,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

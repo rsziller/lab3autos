@@ -13,14 +13,12 @@ namespace DataStructures.LinearStructures
         public Node<T> left { get; set; }
         public Node<T> right { get; set; }
 
-        /*public Node()
-        {
 
+        public int FE { get; set; }
+        public Node()
+        {
+            this.FE = 0;
         }
-
-        public Node(T value)
-        {
-            this.value = value;
-        }*/
     }
 }
+

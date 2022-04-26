@@ -1,3 +1,7 @@
 is_global = true
 build_property.RootNamespace = lab2
+<<<<<<< HEAD
 build_property.ProjectDir = c:\users\rolando ziller\source\repos\labauto\lab2\
+=======
+build_property.ProjectDir = C:\Users\herre\OneDrive\Escritorio\Primer Ciclo 2022\Estructura de Datos\Laboratorio\Laboratorio 03\lab3autos\lab2\
+>>>>>>> origin/MasterJR
